@@ -57,22 +57,12 @@ if opt == 2:
  time.sleep( 1 )
  print(" installing dependencies and complementary modules  ")
  time.sleep( 10 )
- print(''' //////WARNING/////
- 
- BE ATENTIVE !
- Your pass will be created after the solving !
- 
- GOOD LUCK ! 
- 
- 
- 
- ''')
+ usrname = input("User name >>> ")
+ usrpass = input("Password  >>> ")
  os.system(' gvm-setup ') 
  time.sleep( 5 )
- print('''
- Your pass is generating ! 
- ''')
- os.system(' sudo gvmd --user root --new-password 216858  ')
+ 
+ os.system(' sudo gvmd --user '+usrname+' --new-password '+usrpass)
  os.system('sudo greenbone-scapdata-sync ')
  os.system('sudo greenbone-certdata-sync ')  
  os.system('sudo gvm-check-setup  ')
@@ -86,16 +76,16 @@ if opt == 2:
              /   __   \ 
           ,  |   ><   |  ,
          . \  \      /  / .
-          \_'--`(  )'--'_/
-           .--'/(SO)'--.        <==== Solved !! Thank you for using SystemSolver
-           /  /` '' `\  \ 
+          \_'--`(SO)'--'_/
+           .--'/(LV)'--.        <==== Solved !! Thank you for using SystemSolver
+           /  /` ED `\  \ 
              |        |
               \.    ./
 
         === === === === === 
  
-        Openvas User : root
-       Openvas Pass : 216858 
+        Openvas User : '''+usrname+'''
+       Openvas Pass : '''+usrpass+'''
  
         === === === === === 
  
